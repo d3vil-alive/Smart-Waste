@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M60,10 A50,50 0 1,1 60,110 A50,50 0 1,1 60,10 Z" />
+    
+    <!-- Waste Bin -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M40,35 L80,35 L75,85 L45,85 Z" />
+    
+    <!-- Bin Lid -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M35,30 L85,30 L85,35 L35,35 Z" />
+    
+    <!-- Handle -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M50,25 L70,25 L70,30 L50,30 Z" />
+    
+    <!-- Smart Indicator -->
+    <circle
+        android:fillColor="@color/secondary"
+        android:cx="70"
+        android:cy="45"
+        android:r="3" />
+    
+    <!-- Recycling Symbol -->
+    <path
+        android:fillColor="@color/secondary"
+        android:pathData="M55,55 L65,55 L62,65 L58,65 Z" />
+</vector>

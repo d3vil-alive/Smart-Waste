@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Management - Efficient Waste Collection System</title>
+    <meta name="description" content="Revolutionary smart waste management system with IoT sensors, route optimization, and real-time tracking for efficient waste collection.">
+    <meta name="keywords" content="smart waste management, IoT waste bins, route optimization, waste collection, environmental sustainability">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Smart Waste Management System">
+    <meta property="og:description" content="Revolutionary smart waste management with IoT sensors and AI-powered optimization">
+    <meta property="og:image" content="https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg">
+    <meta property="og:url" content="https://smartwaste.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-recycle"></i>
+            </div>
+            <div class="loading-text">Smart Waste</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-recycle"></i>
+                <span>Smart Waste</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#technology" class="nav-link">Technology</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="admin/" class="btn btn-outline">Admin Panel</a>
+                <a href="#demo" class="btn btn-primary">Get Demo</a>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <img src="https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Smart City Waste Management" class="hero-bg-image">
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        Revolutionary <span class="text-gradient">Smart Waste</span> Management System
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform your city's waste collection with IoT-powered smart bins, AI-driven route optimization, and real-time monitoring for maximum efficiency and environmental impact.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="85">0</div>
+                            <div class="stat-label">% Efficiency Increase</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="40">0</div>
+                            <div class="stat-label">% Fuel Savings</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="60">0</div>
+                            <div class="stat-label">% Cost Reduction</div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#demo" class="btn btn-primary btn-lg">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            <i class="fas fa-arrow-down"></i>
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-dashboard">
+                        <div class="dashboard-header">
+                            <div class="dashboard-title">Live Dashboard</div>
+                            <div class="dashboard-status">
+                                <span class="status-dot active"></span>
+                                Real-time
+                            </div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="dashboard-metric">
+                                <div class="metric-icon">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <div class="metric-value">247</div>
+                                    <div class="metric-label">Bins Monitored</div>
+                                </div>
+                            </div>
+                            <div class="dashboard-metric">
+                                <div class="metric-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <div class="metric-value">12</div>
+                                    <div class="metric-label">Active Vehicles</div>
+                                </div>
+                            </div>
+                            <div class="dashboard-metric">
+                                <div class="metric-icon">
+                                    <i class="fas fa-route"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <div class="metric-value">8</div>
+                                    <div class="metric-label">Optimized Routes</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-chart">
+                            <canvas id="heroChart" width="300" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">
+                    Comprehensive smart waste management solution with cutting-edge technology
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="feature-title">IoT Smart Bins</h3>
+                    <p class="feature-description">
+                        Advanced sensors monitor fill levels, temperature, and battery status in real-time with wireless connectivity.
+                    </p>
+                    <div class="feature-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-wifi"></i>
+                            Wireless Connectivity
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-battery-full"></i>
+                            Long Battery Life
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-thermometer-half"></i>
+                            Temperature Monitoring
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="feature-title">AI Route Optimization</h3>
+                    <p class="feature-description">
+                        Machine learning algorithms optimize collection routes for maximum efficiency and minimum fuel consumption.
+                    </p>
+                    <div class="feature-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-brain"></i>
+                            AI-Powered
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            Fuel Efficient
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-clock"></i>
+                            Real-time Updates
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Mobile Applications</h3>
+                    <p class="feature-description">
+                        Dedicated apps for drivers, citizens, and administrators with intuitive interfaces and offline capabilities.
+                    </p>
+                    <div class="feature-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-users"></i>
+                            Multi-user Support
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-download"></i>
+                            Offline Mode
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-bell"></i>
+                            Push Notifications
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Advanced Analytics</h3>
+                    <p class="feature-description">
+                        Comprehensive reporting and analytics with predictive insights for better decision making.
+                    </p>
+                    <div class="feature-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-chart-bar"></i>
+                            Real-time Reports
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-crystal-ball"></i>
+                            Predictive Analytics
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-file-export"></i>
+                            Export Data
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Real-time Tracking</h3>
+                    <p class="feature-description">
+                        Live GPS tracking of vehicles and bins with interactive maps and geofencing capabilities.
+                    </p>
+                    <div class="feature-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-satellite"></i>
+                            GPS Tracking
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-map"></i>
+                            Interactive Maps
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-shield-alt"></i>
+                            Geofencing
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="feature-title">Environmental Impact</h3>
+                    <p class="feature-description">
+                        Track carbon footprint reduction, fuel savings, and environmental benefits with detailed metrics.
+                    </p>
+                    <div class="feature-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-seedling"></i>
+                            Carbon Tracking
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-recycle"></i>
+                            Sustainability
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-award"></i>
+                            Green Metrics
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">
+                    Simple, efficient, and automated waste management process
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <h3 class="step-title">Smart Monitoring</h3>
+                        <p class="step-description">
+                            IoT sensors continuously monitor bin fill levels, temperature, and location data, transmitting real-time information to the central system.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Real-time Data</span>
+                            <span class="feature-tag">Wireless Sensors</span>
+                            <span class="feature-tag">24/7 Monitoring</span>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.pexels.com/photos/8728382/pexels-photo-8728382.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Smart Bin Monitoring" class="step-image">
+                    </div>
+                </div>
+                
+                <div class="process-step reverse" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="step-title">AI Route Optimization</h3>
+                        <p class="step-description">
+                            Advanced algorithms analyze bin data, traffic patterns, and vehicle capacity to generate the most efficient collection routes automatically.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Machine Learning</span>
+                            <span class="feature-tag">Traffic Analysis</span>
+                            <span class="feature-tag">Fuel Optimization</span>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Route Optimization" class="step-image">
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="step-title">Smart Collection</h3>
+                        <p class="step-description">
+                            Drivers receive optimized routes on mobile apps with real-time updates, navigation assistance, and collection status tracking.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Mobile App</span>
+                            <span class="feature-tag">GPS Navigation</span>
+                            <span class="feature-tag">Live Updates</span>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Smart Collection" class="step-image">
+                    </div>
+                </div>
+                
+                <div class="process-step reverse" data-aos="fade-left" data-aos-delay="400">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="step-title">Analytics & Insights</h3>
+                        <p class="step-description">
+                            Comprehensive analytics provide insights into collection efficiency, environmental impact, cost savings, and predictive maintenance needs.
+                        </p>
+                        <div class="step-features">
+                            <span class="feature-tag">Real-time Analytics</span>
+                            <span class="feature-tag">Predictive Insights</span>
+                            <span class="feature-tag">Custom Reports</span>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Analytics Dashboard" class="step-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Transformative Benefits</h2>
+                <p class="section-subtitle">
+                    Measurable improvements across all aspects of waste management
+                </p>
+            </div>
+            
+            <div class="benefits-content">
+                <div class="benefits-visual" data-aos="fade-right">
+                    <div class="benefit-chart">
+                        <div class="chart-container">
+                            <canvas id="benefitsChart" width="400" height="300"></canvas>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #2E7D32;"></span>
+                                <span class="legend-label">Efficiency Gain</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #FF9800;"></span>
+                                <span class="legend-label">Cost Reduction</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #4CAF50;"></span>
+                                <span class="legend-label">Environmental Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits-list" data-aos="fade-left">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">85% Efficiency Increase</h3>
+                            <p class="benefit-description">
+                                Optimize collection routes and schedules based on real-time data, reducing unnecessary trips and maximizing productivity.
+                            </p>
+                            <div class="benefit-metrics">
+                                <span class="metric">↑ 85% Route Efficiency</span>
+                                <span class="metric">↓ 60% Collection Time</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">40% Cost Reduction</h3>
+                            <p class="benefit-description">
+                                Significant savings in fuel, labor, and maintenance costs through intelligent optimization and predictive maintenance.
+                            </p>
+                            <div class="benefit-metrics">
+                                <span class="metric">↓ 40% Fuel Costs</span>
+                                <span class="metric">↓ 30% Labor Costs</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">60% Carbon Reduction</h3>
+                            <p class="benefit-description">
+                                Minimize environmental impact through optimized routes, reduced fuel consumption, and improved waste processing efficiency.
+                            </p>
+                            <div class="benefit-metrics">
+                                <span class="metric">↓ 60% CO₂ Emissions</span>
+                                <span class="metric">↑ 50% Sustainability</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">Improved Citizen Satisfaction</h3>
+                            <p class="benefit-description">
+                                Better service quality with timely collections, cleaner neighborhoods, and transparent communication with citizens.
+                            </p>
+                            <div class="benefit-metrics">
+                                <span class="metric">↑ 90% Satisfaction</span>
+                                <span class="metric">↓ 75% Complaints</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Advanced Technology Stack</h2>
+                <p class="section-subtitle">
+                    Built with cutting-edge technologies for reliability, scalability, and performance
+                </p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>IoT & Hardware</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="ESP32" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>ESP32 Microcontrollers</h4>
+                                <p>Low-power wireless connectivity</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Sensors" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Ultrasonic Sensors</h4>
+                                <p>Accurate fill level detection</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="LoRaWAN" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>LoRaWAN Network</h4>
+                                <p>Long-range wireless communication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend & API</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Node.js" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Node.js & Express</h4>
+                                <p>High-performance API server</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Firebase" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Firebase Database</h4>
+                                <p>Real-time data synchronization</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="WebSocket" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>WebSocket</h4>
+                                <p>Real-time communication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile & Web</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Android" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Android (Kotlin)</h4>
+                                <p>Native mobile applications</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Web" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Progressive Web App</h4>
+                                <p>Cross-platform web interface</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Maps" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Google Maps API</h4>
+                                <p>Advanced mapping & navigation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Analytics</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Machine Learning" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Machine Learning</h4>
+                                <p>Predictive analytics & optimization</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Analytics" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Advanced Analytics</h4>
+                                <p>Real-time insights & reporting</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="AI" class="tech-icon">
+                            <div class="tech-info">
+                                <h4>Route Optimization AI</h4>
+                                <p>Intelligent path planning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text" data-aos="fade-right">
+                    <h2 class="demo-title">See It In Action</h2>
+                    <p class="demo-description">
+                        Experience the power of smart waste management with our interactive demo. See real-time monitoring, route optimization, and analytics in action.
+                    </p>
+                    <div class="demo-features">
+                        <div class="demo-feature">
+                            <i class="fas fa-eye"></i>
+                            <span>Live Dashboard Demo</span>
+                        </div>
+                        <div class="demo-feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile App Preview</span>
+                        </div>
+                        <div class="demo-feature">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics Showcase</span>
+                        </div>
+                    </div>
+                    <div class="demo-actions">
+                        <a href="admin/" class="btn btn-primary btn-lg">
+                            <i class="fas fa-external-link-alt"></i>
+                            Launch Demo
+                        </a>
+                        <a href="#contact" class="btn btn-outline btn-lg">
+                            <i class="fas fa-calendar"></i>
+                            Schedule Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="demo-visual" data-aos="fade-left">
+                    <div class="demo-mockup">
+                        <div class="mockup-screen">
+                            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Dashboard Demo" class="mockup-image">
+                            <div class="mockup-overlay">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mockup-base"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="section-subtitle">
+                    Transform your waste management system with our smart solution
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>info@smartwaste.com</p>
+                            <p>support@smartwaste.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+91 98765 43210</p>
+                            <p>+91 87654 32109</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>123 Tech Park, Innovation District</p>
+                            <p>Kolkata, West Bengal 700001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm" class="form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">Interest</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select your interest</option>
+                                <option value="demo">Request Demo</option>
+                                <option value="pricing">Pricing Information</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="support">Technical Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>Smart Waste</span>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionary smart waste management system transforming cities with IoT technology, AI optimization, and sustainable solutions.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Solutions</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Smart Bins</a></li>
+                        <li><a href="#features">Route Optimization</a></li>
+                        <li><a href="#features">Mobile Apps</a></li>
+                        <li><a href="#features">Analytics</a></li>
+                        <li><a href="#features">Real-time Tracking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#news">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#api">API Reference</a></li>
+                        <li><a href="#status">System Status</a></li>
+                        <li><a href="#security">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                        <li><a href="#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Smart Waste Management System. All rights reserved.</p>
+                </div>
+                <div class="footer-credit">
+                    <p>Developed with ❤️ by <strong>QBrain Team</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
